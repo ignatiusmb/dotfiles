@@ -6,7 +6,9 @@
 
 ```bash
 git clone https://github.com/ignatiusmb/dotfiles.git ~/dotfiles
-cd ~/dotfiles/install && bash packages.sh && bash symlink.sh
+cd ~/dotfiles # Important! used for symlink script
+./install/packages.sh
+./install/symlink.sh # uses current directory as absolute path
 ```
 
 ---
