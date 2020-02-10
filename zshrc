@@ -30,6 +30,9 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# User exports
+export GPG_TTY=$(tty) # FIX git commit signing
+
 # User PATH sources
 PATH="$PATH:$HOME/.local/bin" # python Pipenv
 
