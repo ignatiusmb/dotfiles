@@ -8,6 +8,8 @@ PACKAGES=(
   "curl"
   "python3.8"
   "python3-pip"
+  "build-essential"
+  "gdb"
 )
 for PKG in "${PACKAGES[@]}"; do
   sudo apt -y install $PKG
