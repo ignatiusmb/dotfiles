@@ -50,3 +50,5 @@ alias ..="cd .."
 
 alias python="python3.8"
 alias pip="python -m pip"
+
+alias gc="g++ -Wall -Weffc++ -Wextra -Wsign-conversion"
