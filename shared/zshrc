@@ -48,6 +48,9 @@ alias ll="la -sh"
 
 alias ..="cd .."
 
+alias gcm="git commit -m"
+alias gpom="git push origin master"
+
 alias python="python3.8"
 alias pip="python -m pip"
 
