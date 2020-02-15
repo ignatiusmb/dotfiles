@@ -3,9 +3,9 @@
 # shared dotfiles
 PB_DFS=(
   ".bashrc"
+  ".p10k.zsh"
   ".zshrc"
   ".zsh-filetype-highlighting"
-  ".p10k.zsh"
 )
 
 # private dotfiles
@@ -19,7 +19,16 @@ for DF in "${PB_DFS[@]}"; do
 done
 echo
 for DF in ${PV_DFS[@]}; do
-  ln -sfv "$(pwd)/private/$DF" ~/$DF
+  TARGET="$(pwd)/private/$DF"
+  DEST="$HOME/$DF"
+  if [ -d $TARGET ]; then
+    if [ -L $DEST ]; then
+      rm $DEST
+    fi
+    ln -sdfv $TARGET ~/$DF
+  else
+    ln -sfv $TARGET ~/$DF
+  fi
 done
 
 echo -e "\nhttps://github.com/ignatiusmb/dotfiles"
