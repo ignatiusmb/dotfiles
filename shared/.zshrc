@@ -32,9 +32,21 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # User exports
 export GPG_TTY=$(tty) # FIX git commit signing
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export ANDROID_HOME=~/development/Android
+export FLUTTER_HOME=~/development/flutter
+export SDKMAN_DIR=~/.sdkman
 
-# User PATH sources
-PATH="$PATH:$HOME/.local/bin" # python Pipenv
+# User PATH exports
+export PATH="$PATH:$HOME/.local/bin" # python Pipenv
+export PATH="$PATH:$JAVA_HOME/bin"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$FLUTTER_HOME/bin"
+
+# User SOURCES
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # Custom user sources
 # source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
