@@ -32,26 +32,17 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # User exports
 export GPG_TTY=$(tty) # FIX git commit signing
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export ANDROID_HOME=~/development/Android
-export FLUTTER_HOME=~/development/flutter
-export SDKMAN_DIR=~/.sdkman
+export NVM_DIR="$HOME/.nvm"
 
 # User PATH exports
 export PATH="$PATH:$HOME/.local/bin" # python Pipenv
-export PATH="$PATH:$JAVA_HOME/bin"
-export PATH="$PATH:$ANDROID_HOME/tools"
-export PATH="$PATH:$ANDROID_HOME/tools/bin"
-export PATH="$PATH:$ANDROID_HOME/platform-tools"
-export PATH="$PATH:$FLUTTER_HOME/bin"
-
-# User SOURCES
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # Custom user sources
 # source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval $( dircolors -b $HOME/.dircolors )
 source ~/.zsh-filetype-highlighting
+source "$NVM_DIR/nvm.sh"  # This loads nvm
+source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Custom user aliases
 alias ls="ls -FG --color"
@@ -66,4 +57,4 @@ alias gpom="git push origin master"
 alias python="python3.8"
 alias pip="python -m pip"
 
-alias gc="g++ -Wall -Weffc++ -Wextra -Wsign-conversion"
+alias gmake="g++ -Wall -Weffc++ -Wextra -Wsign-conversion"
