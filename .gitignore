@@ -1,2 +1,7 @@
 # sensitive informations
-private/
+database/**
+!database/paths.json
+!database/symlink.py
+
+# workspaces
+.vscode
