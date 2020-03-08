@@ -32,7 +32,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # User exports
 export GPG_TTY=$(tty) # FIX git commit signing
-export NVM_DIR="$HOME/.nvm"
 
 # User PATH exports
 export PATH="$PATH:$HOME/.local/bin" # python Pipenv
@@ -41,8 +40,6 @@ export PATH="$PATH:$HOME/.local/bin" # python Pipenv
 # source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval $( dircolors -b $HOME/.dircolors )
 source ~/.zsh-filetype-highlighting
-source "$NVM_DIR/nvm.sh"  # This loads nvm
-source "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Custom user aliases
 alias ls="ls -FG --color"
