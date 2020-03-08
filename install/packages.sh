@@ -20,11 +20,7 @@ PACKAGES=(
 sudo apt update && sudo apt upgrade -qy
 for PKG in "${PACKAGES[@]}"; do
   sudo apt -qy install $PKG
-  if type -p $PKG >/dev/null; then
-    echo "$PKG successfully installed"
-  else
-    echo "$PKG failed to install!!"
-  fi
+  type -p $PKG
 done
 
 # zsh related
@@ -38,10 +34,6 @@ curl https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -o ~/.dircolors
 chsh -s $(which zsh)
 
 ### DEVELOPMENT ###
-# nvm + NodeJS
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
-nvm install node
-
 
 sudo apt update && sudo apt upgrade -qy
 echo -e "\nhttps://github.com/ignatiusmb/dotfiles\n"
